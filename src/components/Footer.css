@@ -1,0 +1,123 @@
+.footer {
+  position: relative;
+  color: #fff;
+  font-size: 0.95rem;
+  overflow: hidden;
+}
+
+/* Background image with overlay container */
+.footer::before {
+  content: "";
+  background-image: url('https://suyashayurveda.com/wp-content/uploads/2021/10/Sunflower-Oil-Suyash.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Overlay color */
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+  z-index: 1;
+}
+
+.footer-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.footer-section .arrow {
+  font-size: 1rem;
+  margin-left: 8px;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer-links.show {
+  display: flex;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.footer-links li a:hover {
+  color: #f3c623;
+}
+
+.footer-section.company-info {
+  max-width: 300px;
+}
+
+.footer-section.company-info p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-social svg {
+  fill: #ccc;
+  transition: fill 0.3s ease;
+}
+
+.footer-social svg:hover {
+  fill: #f3c623;
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
+/* Desktop: always show lists */
+@media (min-width: 768px) {
+  .footer-links {
+    display: flex !important;
+  }
+
+  .footer-section h4 .arrow {
+    display: none;
+  }
+}

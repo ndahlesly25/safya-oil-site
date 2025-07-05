@@ -1,0 +1,66 @@
+/* src/pages/Media.css */
+
+.media-page {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.media-banner {
+  background-image: url('https://3.imimg.com/data3/HC/II/MY-5361260/refined-sunflower-oil-500x500.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+}
+
+.media-title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.media-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #eee;
+}
+
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.media-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.media-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.media-card h3 {
+  font-size: 1.1rem;
+  padding: 1rem;
+  color: #222;
+}
