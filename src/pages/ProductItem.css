@@ -1,0 +1,66 @@
+/* src/pages/ProductItem.css */
+
+.detail-banner {
+  background: url('https://safya.com.tr/wp-content/uploads/2022/08/mutfak-sefi-urunler.jpg') no-repeat center center;
+  background-size: cover;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px #000;
+}
+
+.detail-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem;
+  align-items: flex-start;
+}
+
+.detail-content img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bullet-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+}
+
+.description {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.extra-img-section {
+  margin: 2rem;
+}
+
+.extra-img-section img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn {
+  display: inline-block;
+  margin: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #f2b705;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #d69904;
+}

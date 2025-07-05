@@ -3,6 +3,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import PageWrapper from '../components/PageWrapper';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Home.css';
+import { products } from '../data/products';
+import { Link } from 'react-router-dom';
+
 
 const imageList = [
   'https://grace.com/content/dam/grace-site/english/hero/materials-technologies/mt-edible-oils-and-fats-sunflower-oil-bottle.jpg',
@@ -100,73 +103,80 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Product Showcase Section */}
-        <section id="product-showcase" className="product-showcase">
-          <h2 className="section-title">Our Products</h2>
-          <div className="product-grid">
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya_900mL-Harcialem-en-570x684-1.jpg" alt="Sunflower Oil" />
-              <h3>Safya 900 mL Pet Bottle</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/1LT_SafyaSultan-en-570x684-1.jpg" alt="Corn Oil" />
-              <h3>1L Safya Sultan</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya_1LT-Harcialem-en-570x684-1.jpg" alt="Safya Cuisine Chef" />
-              <h3>Safya 1 L Pet Bottle</h3>
-              <p></p>
-            </div>
-          <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya-1Lt-Cicekli-Pet_EN-570x684-1.jpg" alt="Corn Oil" />
-              <h3>1 L Flower Pet Bottle</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/1Lt-Karepet-en-570x684-1.jpg" alt="Safya Cuisine Chef" />
-              <h3>1 L Pet Bottle Squared</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya_1.8L-Pet-en-1-570x684-1.jpg" alt="1,8 L Pet Bottle" />
-              <h3>1,8 L Pet Bottle</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya_2LT_SafyaSultan_en-570x684-1.jpg" alt="2L Safya Sultan" />
-              <h3>2L Safya Sultan</h3>
-              <p></p>
-            </div>
-          <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya-2-Lt-Harcialem-en-570x684-1.jpg" alt="2 L Pet Bottle" />
-              <h3>2 L Pet Bottle</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya-3Lt-Pet_en-570x684-1.jpg" alt="3 L Pet Bottle Squared" />
-              <h3>3 L Pet Bottle Squared</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya-4Lt-Pet_EN-570x684-1.jpg" alt="4 L Pet Bottle Squared" />
-              <h3>4 L Pet Bottle Squared</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/03/safya-45lt-pet_en.jpg" alt="4.5 L Pet Bottle Squared" />
-              <h3>4.5 L Pet Bottle Squared</h3>
-              <p></p>
-            </div>
-            <div className="product-card">
-              <img src="https://www.safyayagi.com/wp-content/uploads/2023/02/Safya-5Lt-Sidel-Pet_EN-570x684-2.jpg" alt="5 L Pet Bottle Squared" />
-              <h3>5 L Pet Bottle Squared</h3>
-              <p></p>
-            </div>
-            
-          </div>
-        </section>
+
+
+{/* Product Showcase Section */}
+<section id="product-showcase" className="product-showcase">
+  <h2 className="section-title">SAFYA PRODUCTS</h2>
+
+  <div className="product-category-row">
+    {/* ===== SUNFLOWER OIL ===== */}
+    <div className="product-category-block">
+      <h3 className="category-title">Sunflower Oil</h3>
+      <div className="product-grid">
+        {products.filter(p => p.category === 'sunflower').slice(0, 3).map((prod) => (
+          <motion.div
+            key={prod.id}
+            className="product-card"
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <img src={prod.image} alt={prod.title} className="w-full h-64 object-contain" />
+            <h4 className="text-lg font-bold mt-2">{prod.title}</h4>
+            <p className="text-sm text-gray-600">{prod.short}</p>
+          </motion.div>
+        ))}
+      </div>
+      <div className="all-products-wrapper">
+        <Link to="/products/sunflower-oil" className="all-products-btn">SEE ALL PRODUCTS</Link>
+      </div>
+    </div>
+
+    {/* ===== CORN OIL ===== */}
+    <div className="product-category-block">
+      <h3 className="category-title">Corn Oil</h3>
+      <div className="product-grid">
+        {products.filter(p => p.category === 'corn').slice(0, 3).map((prod) => (
+          <motion.div
+            key={prod.id}
+            className="product-card"
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <img src={prod.image} alt={prod.title} className="w-full h-64 object-contain" />
+            <h4 className="text-lg font-bold mt-2">{prod.title}</h4>
+            <p className="text-sm text-gray-600">{prod.short}</p>
+          </motion.div>
+        ))}
+      </div>
+      <div className="all-products-wrapper">
+        <Link to="/products/corn-oil" className="all-products-btn">SEE ALL PRODUCTS</Link>
+      </div>
+    </div>
+
+    {/* ===== CUISINE CHEF ===== */}
+    <div className="product-category-block">
+      <h3 className="category-title">Cuisine Chef</h3>
+      <div className="product-grid">
+        {products.filter(p => p.category === 'cuisine').slice(0, 3).map((prod) => (
+          <motion.div
+            key={prod.id}
+            className="product-card"
+            whileHover={{ scale: 1.05, rotate: 1 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <img src={prod.image} alt={prod.title} className="w-full h-64 object-contain" />
+            <h4 className="text-lg font-bold mt-2">{prod.title}</h4>
+            <p className="text-sm text-gray-600">{prod.short}</p>
+          </motion.div>
+        ))}
+      </div>
+      <div className="all-products-wrapper">
+        <Link to="/products/cuisine-chef" className="all-products-btn">SEE ALL PRODUCTS</Link>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Mission Section */}
         <section className="mission-section">

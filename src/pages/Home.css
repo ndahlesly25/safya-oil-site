@@ -61,12 +61,6 @@
   background-color: #e6b800;
 }
 
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
 .hero-background {
   position: absolute;
   inset: 0;
@@ -279,6 +273,7 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  background:#fff;
   justify-items: center;
 }
 
@@ -312,5 +307,118 @@ section {
   font-size: 0.95rem;
   margin: 0 1rem 1.5rem;
   color: #555;
+}
+
+/* Button below each grid */
+.all-products-btn {
+  display: inline-block;
+  margin: 1.5rem auto 3rem;
+  padding: 0.6rem 2rem;
+  background: #f3c623;
+  color: #000;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+
+.all-products-btn:hover {
+  background: #e6b800;
+}
+
+
+/* products grid (Products.css) */
+.products-banner{
+  height:40vh;
+  background:url('https://www.safyayagi.com/wp-content/uploads/2023/02/products-banner.jpg') center/cover no-repeat;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.4);
+}
+.products-banner h1{font-size:2.5rem;background:rgba(0,0,0,.4);padding:.5rem 1.5rem;border-radius:6px}
+
+
+.product-card{
+  background:#fafafa;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+
+.product-card img{width:100%;display:block}
+.product-card h3{padding:1rem;font-size:1.1rem;color:#333}
+
+/* detail page */
+.detail-banner{
+  height:35vh;background-size:cover;background-position:center;
+}
+.detail-content{
+  display:flex;flex-wrap:wrap;gap:2rem;padding:4rem 2rem;align-items:center;
+}
+.detail-content img{width:300px;border-radius:8px}
+.detail-content .back-btn{
+  display:inline-block;margin-top:1rem;color:#f3c623;font-weight:600;
+}
+
+/* Category heading */
+.category-title {
+  margin: 3rem 0 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) rotate(0.5deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Product Showcase Section Enhancements */
+.product-category-block {
+  margin-bottom: 4rem;
+}
+
+.all-products-wrapper {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* ──────────────────────────────────────────────
+   CLEAN‑UP / OVERRIDES FOR PRODUCT SHOWCASE
+   (add these at the very bottom of Home.css)
+────────────────────────────────────────────── */
+
+/* put each category’s grid cards in a *single row*
+   on medium‑large screens, but fall back to wrapping
+   on tablets/phones                                          */
+
+@media (min-width: 992px) {
+  .product-grid {
+    flex-wrap: nowrap;        /* desktop – no wrapping  */
+  }
+}
+
+/* optional: soften the card hover for desktop only            */
+@media (hover: hover) {
+  .product-card:hover {
+    transform: translateY(-8px) rotate(0.5deg);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* Horizontal row for categories */
+.product-category-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 

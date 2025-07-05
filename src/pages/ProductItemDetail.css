@@ -1,0 +1,113 @@
+/* reuse earlier banner rules */
+
+.item-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: center;
+  background:#fff;
+}
+.big-img { width: 320px; border-radius: 8px; }
+.item-bullets {
+  flex: 1 1 250px;
+  list-style: disc inside;
+  font-size: 1rem;
+  line-height: 1.7;
+  color:#333;
+}
+
+/* description */
+.item-desc {
+  padding: 2rem 2rem 4rem;
+  background:#fafafa;
+}
+.item-desc h2 { margin-bottom: 1rem; }
+.item-desc img {
+  margin-top: 1.5rem;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* “see more” under thumbs */
+.thumb-title { font-weight:600; margin-top:.5rem; }
+.see-more {
+  display:block;
+  font-size:.8rem;
+  color:#f3c623;
+  margin-bottom:1rem;
+}
+.gallery-link { text-decoration:none; color:inherit; }
+
+/* back btn already declared earlier */
+
+
+/* src/pages/ProductItem.css */
+
+.feature-heading,
+.description-heading,
+.extra-heading{
+  font-size:1.25rem;
+  font-weight:600;
+  margin:1.5rem 0 .5rem;
+}
+
+.bullet-list{
+  list-style:disc inside;
+  margin:0 0 1.5rem;
+  line-height:1.6;
+}
+
+.extra-img{
+  width:100%;
+  max-width:380px;
+  border-radius:8px;
+  margin-top:.75rem;
+}
+
+.item-detail-wrapper {
+  padding: 2rem;
+}
+
+.item-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.item-image img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.item-bullets {
+  flex: 1;
+}
+
+.item-bullets h3,
+.item-desc h3,
+.item-extra h4 {
+  margin-bottom: 0.5rem;
+}
+
+.item-bullets ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.item-desc p {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.item-extra img {
+  max-width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+}
+
+.back-holder {
+  margin-top: 2rem;
+}
