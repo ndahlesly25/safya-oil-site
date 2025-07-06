@@ -19,9 +19,11 @@ import BlogDetail from './pages/BlogDetail';
 import ProductDetail from './pages/ProductDetail';
 import ProductItemDetail from './pages/ProductItemDetail'; // ✅ This is the detail view for each oil item
 
+
 function App() {
   return (
     <Router>
+      
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -38,9 +40,11 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/products/:slug" element={<ProductDetail />} />
+        
 
         {/* ✅ Handles all sunflower/corn product detail pages */}
         <Route path="/item/:category/:slug" element={<ProductItemDetail />} />
+         
       </Routes>
       <Footer />
     </Router>

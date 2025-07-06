@@ -13,8 +13,8 @@ export const products = [
     title: "Safya Corn Oil 1L",
     slug: "corn-oil-1l",
     category: "corn",
-    image: "https://www.clinikally.com/cdn/shop/articles/Top_10_Benefits_of_Sunflower_Oil_for_Skin.png?v=1678691523",
-    short: "Ideal for frying and sautéing, with light and neutral taste."
+    image: "https://safyasunfloweroil.com/wp-content/uploads/2024/05/misir-yagi-urunler-1536x864-1.jpg",
+    short: "Safya Corn Oil was specially developed to bring the purest form of taste to your tables. You can use Safya Corn Oil in all fish dishes, for frying vegetables and dough, in hot dishes, in sauces and salads, and in meat dishes cooked by sauteing method."
   },
   
   {
@@ -22,8 +22,8 @@ export const products = [
     title: "Safya Cuisine Chef 10L",
     slug: "cuisine-chef-10l",
     category: "cuisine",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKhOXFAdMNtibIlu3GtJsAVyWeRvHt0VohzyN3fTJmL5r_EeMzYl-sYHLMuh1j3k6kPfw&usqp=CAU",
-    short: "For professional chefs. Long frying life and no smell."
+    image: "https://safyasunfloweroil.com/wp-content/uploads/2024/05/mutfak-sefi-urunler-1536x864-1.jpg",
+    short: "4.5L X 4 Safya Kitchen Chef was developed for flavorists. Safya Kitchen Chef, produced by considering the special needs of companies serving in the food sector, is suitable for all professional kitchens."
   },
   
 ];

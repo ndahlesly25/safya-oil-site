@@ -111,3 +111,197 @@
 .back-holder {
   margin-top: 2rem;
 }
+
+
+
+.cuisine-banner {
+  position: relative;
+  background-image: url('https://www.safyayagi.com/wp-content/uploads/2023/03/misir-yagi-urunler-1536x864-1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cuisine-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1;
+}
+
+.cuisine-banner-title {
+  z-index: 2;
+  color: rgb(0, 0, 0);
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.flavorist-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.flavorist-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  color: #333;
+}
+
+.underline-img {
+  display: block;
+  margin: 10px auto 0;
+  height: 15px;
+}
+
+.flavorist-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+
+.safya-advantages-section {
+  background-color: rgb(240, 232, 217);
+  padding: 4rem 2rem;
+}
+
+.safya-advantages-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.advantages-text {
+  flex: 1 1 500px;
+  padding-right: 2rem;
+}
+
+.advantages-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.mini-title {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.main-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.underline-img {
+  display: block;
+  margin-top: 0.5rem;
+  width: 150px;
+  height: auto;
+}
+
+.tick-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.tick-list li {
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .safya-advantages-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .advantages-text,
+  .advantages-image {
+    padding: 0;
+    text-align: center;
+  }
+
+  .underline-img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+.dual-oil-section {
+  background-color: white;
+  padding: 3rem 1rem;
+}
+
+.oil-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.oil-item {
+  flex: 1 1 280px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.oil-item img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.oil-item:hover img {
+  transform: scale(1.05);
+}
+
+.oil-label {
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .oil-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .oil-item {
+    max-width: 320px;
+    margin-bottom: 2rem;
+  }
+}

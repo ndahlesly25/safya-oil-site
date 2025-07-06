@@ -14,43 +14,18 @@
   width: 100%;
 }
 
-
-/* Sliding Container */
 .export-banner-slider {
   display: flex;
   transition: transform 0.8s ease-in-out;
   height: 100%;
 }
 
-/* Each Banner Image */
 .banner-image {
   flex: 0 0 100%;
   height: 100%;
   background-size: cover;
   background-position: center;
 }
-
-/* Content Section */
-.export-content {
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
-
-.export-content h1 {
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 1rem;
-}
-
-.export-content p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-}
-
 
 /* Arrows */
 .nav-button {
@@ -102,4 +77,339 @@
 
 .dot.active {
   background-color: #444;
+}
+
+/* Export Info Section */
+.export-info-section {
+  background-color: #fff;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 1rem auto;
+}
+
+.export-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.export-info-left {
+  flex: 1;
+  max-width: 45%;
+}
+
+.export-info-left h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #222;
+  position: relative;
+}
+
+.underline-img {
+  display: block;
+  height: 20px;
+  margin-top: 0.3rem;
+}
+
+.export-info-right {
+  flex: 1;
+  max-width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.export-info-right p {
+  margin-bottom: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .export-info-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .export-info-left,
+  .export-info-right {
+    max-width: 100%;
+  }
+  .export-info-left h2 {
+    font-size: 1.4rem;
+  }
+  .export-info-right p {
+    font-size: 1rem;
+  }
+}
+
+/* Gold Banner Section */
+.about-aves-banner {
+  background-color: rgba(243, 222, 65, 0.85);
+  color: #000;
+  font: 1em sans-serif;
+  padding: 4rem 1rem;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+.about-aves-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-aves-banner h2 {
+  font-weight: normal;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-aves-banner p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-aves-banner {
+    padding: 3rem 1rem;
+  }
+
+  .about-aves-banner h2 {
+    font-size: 2.6rem;
+  }
+
+  .about-aves-banner p {
+    font-size: 1rem;
+  }
+}
+
+/* ABOUT SAVKA Section */
+.about-savka-section {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-savka-left {
+  flex: 1;
+  max-width: 50%;
+}
+
+.about-savka-heading {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.about-savka-left img.underline-img {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+.about-savka-left p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-savka-right {
+  flex: 1;
+  max-width: 45%;
+  position: relative;
+}
+
+.savka-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.savka-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.8s ease-in-out;
+}
+
+/* Arrows in Savka Slider */
+.about-savka-right .nav-button {
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #222;
+  padding: 6px 10px;
+  font-size: 1.6rem;
+  z-index: 5;
+  border-radius: 50%;
+}
+
+.about-savka-right .nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.about-savka-right .prev {
+  left: 10px;
+}
+
+.about-savka-right .next {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-savka-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .about-savka-left,
+  .about-savka-right {
+    max-width: 100%;
+  }
+
+  .about-savka-heading {
+    font-size: 1.5rem;
+  }
+
+  .about-savka-left p {
+    font-size: 1rem;
+  }
+}
+
+/* Full-width Map Section */
+.map-section {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+/* About SAVKA Section */
+.about-savka-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  align-items: center;
+}
+
+.about-savka-left,
+.about-savka-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-savka-heading {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.underline-img {
+  width: 140px;
+  margin-bottom: 1.5rem;
+}
+
+.about-savka-left p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+/* SAVKA Slider */
+.savka-slider {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.savka-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.8s ease-in-out;
+}
+
+/* Slider Navigation */
+.savka-slider .nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.8rem;
+  z-index: 2;
+  transition: background-color 0.3s;
+}
+
+.savka-slider .nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.savka-slider .prev {
+  left: 10px;
+}
+
+.savka-slider .next {
+  right: 10px;
+}
+
+/* ✅ Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .about-savka-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .savka-slider {
+    height: 250px;
+    max-width: 100%;
+  }
+
+  .savka-image {
+    height: 100%;
+  }
+
+  .about-savka-left,
+  .about-savka-right {
+    width: 100%;
+  }
 }
