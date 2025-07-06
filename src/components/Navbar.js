@@ -1,3 +1,4 @@
+// src/components/Navbar.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -8,24 +9,29 @@ import {
   FaWhatsapp,
   FaBars,
   FaTimes,
+  FaEnvelope,
+  FaPhone,
+  FaSearch,
 } from 'react-icons/fa';
 import './Navbar.css';
+import safyaLogo from '../assets/safya-logo.jpg';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(null);
 
   useEffect(() => {
-    const close = () => {
+    const closeOnResize = () => {
       setOpen(false);
       setDrawerOpen(null);
     };
-    window.addEventListener('resize', close);
-    return () => window.removeEventListener('resize', close);
+    window.addEventListener('resize', closeOnResize);
+    return () => window.removeEventListener('resize', closeOnResize);
   }, []);
 
-  const toggleDrawerSection = (section) =>
+  const toggleDrawerSection = (section) => {
     setDrawerOpen(drawerOpen === section ? null : section);
+  };
 
   return (
     <header>
@@ -33,48 +39,42 @@ const Navbar = () => {
       <div className="top-bar">
         <div className="top-left">
           <span className="contact">
-            <svg width="16" viewBox="0 0 24 24">
-              <path d="M2 4h20v16H2z" fill="none" />
-              <path d="M21 8l-9 6-9-6" stroke="currentColor" strokeWidth="2" fill="none" />
-            </svg>
-            info@sunflower.com
+            <FaEnvelope className="icon" /> info@sunflower.com
           </span>
           <span className="contact">
-            <svg width="16" viewBox="0 0 24 24">
-              <path d="M6.5 3h11A2.5 2.5 0 0 1 20 5.5v13A2.5 2.5 0 0 1 17.5 21h-11A2.5 2.5 0 0 1 4 18.5v-13A2.5 2.5 0 0 1 6.5 3z" fill="none" stroke="currentColor" strokeWidth="2" />
-              <path d="M8 7h8M8 11h8M8 15h5" stroke="currentColor" strokeWidth="2" />
-            </svg>
-            +1 000 000 00 00
+            <FaPhone className="icon" /> +1 000 000 00 00
           </span>
         </div>
 
         <div className="social">
-          <a href="#"><FaFacebookF /></a>
-          <a href="#"><FaTwitter /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaPinterestP /></a>
-          <a href="#"><FaWhatsapp /></a>
-        </div>
+  <button type="button" className="icon-button" aria-label="Facebook"><FaFacebookF /></button>
+  <button type="button" className="icon-button" aria-label="Twitter"><FaTwitter /></button>
+  <button type="button" className="icon-button" aria-label="Instagram"><FaInstagram /></button>
+  <button type="button" className="icon-button" aria-label="Pinterest"><FaPinterestP /></button>
+  <button type="button" className="icon-button" aria-label="WhatsApp"><FaWhatsapp /></button>
+</div>
+
       </div>
 
       {/* Mid Bar */}
       <div className="mid-bar">
-        <button className="hamburger" onClick={() => setOpen(!open)} aria-label="toggle menu">
+        <button
+          className="hamburger"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle Menu"
+        >
           {open ? <FaTimes /> : <FaBars />}
         </button>
 
         <h1 className="site-logo">
-          <img src={require('../assets/safya-logo.jpg')} alt="Safya" />
+          <img src={safyaLogo} alt="Safya Logo" />
         </h1>
 
         <div className="search-lang-wrapper">
           <form className="search-box">
             <input type="text" placeholder="Search…" />
-            <button type="submit" aria-label="search">
-              <svg width="16" viewBox="0 0 24 24">
-                <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" fill="none" />
-                <path d="M20 20l-3.5-3.5" stroke="currentColor" strokeWidth="2" />
-              </svg>
+            <button type="submit" aria-label="Search">
+              <FaSearch />
             </button>
           </form>
 
@@ -88,7 +88,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Desktop Nav */}
+      {/* Desktop Navigation */}
       <nav className="nav-desktop">
         <Link to="/">Home</Link>
 
@@ -117,12 +117,15 @@ const Navbar = () => {
         <Link to="/contact">Contact Us</Link>
       </nav>
 
-      {/* Mobile Nav Drawer */}
+      {/* Mobile Drawer Navigation */}
       <nav className={`nav-drawer ${open ? 'open' : ''}`}>
         <Link to="/" onClick={() => setOpen(false)}>Home</Link>
 
         <div className="drawer-section">
-          <div className="drawer-header" onClick={() => toggleDrawerSection('corporate')}>
+          <div
+            className="drawer-header"
+            onClick={() => toggleDrawerSection('corporate')}
+          >
             Corporate ▾
           </div>
           {drawerOpen === 'corporate' && (
@@ -137,7 +140,10 @@ const Navbar = () => {
         <Link to="/export" onClick={() => setOpen(false)}>Export</Link>
 
         <div className="drawer-section">
-          <div className="drawer-header" onClick={() => toggleDrawerSection('products')}>
+          <div
+            className="drawer-header"
+            onClick={() => toggleDrawerSection('products')}
+          >
             Products ▾
           </div>
           {drawerOpen === 'products' && (
