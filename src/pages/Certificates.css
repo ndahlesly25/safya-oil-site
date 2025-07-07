@@ -1,4 +1,7 @@
-/* src/pages/Certificates.css */
+/* ========== GLOBAL ========== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 /* ========== HERO BANNER ========== */
 .certificates-banner {
@@ -21,6 +24,7 @@
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   z-index: 1;
   word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 768px) {
@@ -37,6 +41,7 @@
   text-align: center;
   font-size: 1.1rem;
   color: #333;
+  overflow-wrap: break-word;
 }
 
 /* ========== FACTORY INFO SECTION ========== */
@@ -54,14 +59,11 @@
   gap: 2rem;
 }
 
-.factory-info-left {
-  flex: 1;
-  min-width: 300px;
-}
-
+.factory-info-left,
 .factory-info-right {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 48%;
 }
 
 .factory-small-title {
@@ -77,6 +79,8 @@
   font-weight: bold;
   color: #333;
   line-height: 1.5;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .underline-img {
@@ -90,26 +94,8 @@
   line-height: 1.7;
   color: #444;
   margin-bottom: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .factory-info-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .factory-main-title {
-    font-size: 1.5rem;
-  }
-
-  .factory-info-left,
-  .factory-info-right {
-    width: 100%;
-  }
-
-  .underline-img {
-    margin: 0 auto;
-  }
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ========== CERTIFICATES LIST SECTION ========== */
@@ -128,9 +114,11 @@
   align-items: flex-start;
 }
 
-.certificates-list-left {
-  flex: 1;
-  min-width: 300px;
+.certificates-list-left,
+.certificates-list-right {
+  flex: 1 1 45%;
+  min-width: 280px;
+  max-width: 48%;
 }
 
 .certificate-items {
@@ -147,6 +135,9 @@
   font-size: 1rem;
   color: #333;
   line-height: 1.5;
+  text-align: left;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .certificate-items li::before {
@@ -175,22 +166,37 @@
 
 /* Right Side Image */
 .certificates-list-right {
-  flex: 1;
-  min-width: 300px;
   display: flex;
   justify-content: center;
 }
 
 .certificates-list-right img {
+  width: 100%;
   max-width: 90%;
+  height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
 
-/* Mobile Adjustments */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
+  .factory-info-container,
   .certificates-list-container {
     flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+  .factory-info-left,
+  .factory-info-right,
+  .certificates-list-left,
+  .certificates-list-right {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .factory-info-right p,
+  .certificate-items li {
     text-align: center;
   }
 
@@ -198,8 +204,11 @@
     margin-top: 2rem;
   }
 
-  .certificate-items li {
-    text-align: left;
-    padding-left: 2.5rem;
+  .certificates-title {
+    font-size: 2.5rem;
+  }
+
+  .factory-main-title {
+    font-size: 1.5rem;
   }
 }

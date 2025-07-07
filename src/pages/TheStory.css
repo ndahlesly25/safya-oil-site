@@ -1,8 +1,9 @@
-/* ================================
-   src/pages/TheStory.css
-   ================================ */
+/* Global box-sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-/* === Story Banner === */
+/* Story Banner */
 .story-banner {
   background-image: url('https://img.freepik.com/premium-photo/happy-family-eating-pizza-home_392895-2400.jpg');
   background-size: cover;
@@ -11,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem; /* add some padding for narrow screens */
   text-align: center;
 }
 
@@ -19,9 +21,13 @@
   font-weight: bold;
   color: black;
   text-shadow: 1px 1px 4px white;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
-/* === Main Story Page === */
+/* Main container */
 .the-story-page {
   max-width: 900px;
   margin: 3rem auto;
@@ -29,248 +35,97 @@
   font-size: 1.1rem;
   line-height: 1.7;
   background-color: #fff;
+  overflow-wrap: break-word;
 }
 
-/* === Safya Kitchen Section === */
-.safya-kitchen-section {
-  background-color: #fff;
-  padding: 3rem 1rem;
-}
-
-.safya-kitchen-container {
+/* Flex containers with safe min-width */
+.safya-kitchen-container,
+.clean-world-content,
+.innovation-container,
+.empowered-women-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
-  align-items: flex-start;
+  padding: 0 1rem;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .safya-kitchen-headings,
-.safya-kitchen-left,
-.safya-kitchen-right,
-.safya-kitchen-content {
-  flex: 1;
-  max-width: 50%;
-}
-
-.safya-small-title {
-  font-size: 1rem;
-  color: #000;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
-}
-
-.safya-main-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #333;
-  position: relative;
-}
-
-.underline-img {
-  display: block;
-  height: 20px;
-  margin-top: 0.3rem;
-}
-
-.safya-kitchen-left p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  color: #444;
-}
-
-/* === Yellow Quote Box === */
-.safya-quote-box {
-  background-color: #eeebc9;
-  padding: 2rem;
-  margin: 3rem auto 0 auto;
-  border-radius: 8px;
-  max-width: 1100px;
-  animation: fadeInUp 1s ease-out;
-}
-
-.safya-quote-box h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.quote-paragraphs p {
-  font: 2em sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 1rem;
-}
-
-/* === Clean World Section === */
-.clean-world-section {
-  position: relative;
-  width: 100%;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTprgLDXJ0C5pZ1yZIC-yG1i7aG3H_c0d3zjQ&s');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 4rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.clean-world-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(168, 145, 30, 0.75);
-  z-index: 1;
-}
-
-.clean-world-content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
-  padding: 2rem;
-  color: black;
-  font: 1em sans-serif;
-}
-
+.safya-kitchen-content,
+.innovation-image,
+.innovation-text,
+.empowered-women-text,
+.empowered-women-image,
 .clean-world-left,
 .clean-world-right {
-  flex: 1;
-  min-width: 300px;
-  padding: 20px;
-}
-
-.small-title {
-  font-size: 16px;
-  color: #000;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-}
-
-.main-title {
-  font-size: 40px;
-  font-weight: bold;
-  line-height: 1.4;
-}
-
-.clean-world-right p {
-  font-size: 18px;
-  margin-bottom: 16px;
-  line-height: 1.6;
-}
-
-/* === Innovation Section === */
-.innovation-section {
-  background-color: #fff;
-  padding: 4rem 1rem;
-}
-
-.innovation-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
-.innovation-image,
-.innovation-text {
-  flex: 1;
+  flex: 1 1 45%;
   min-width: 280px;
-  max-width: 50%;
+  max-width: 48%;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
-.innovation-image img {
-  width: 90%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.innovation-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.innovation-text p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444;
-}
-
-/* === Empowered Women Section === */
-.empowered-women-section {
-  background-color: #fff;
-  padding: 4rem 1rem;
-}
-
-.empowered-women-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.empowered-women-text,
-.empowered-women-image {
-  flex: 1;
-  min-width: 280px;
-  max-width: 50%;
-}
-
-.empowered-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 1rem;
-}
-
-.empowered-women-text p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #444;
-}
-
+/* Images */
+.innovation-image img,
 .empowered-women-image img {
   width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
-/* === Animation === */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* Headings adjustments */
+.safya-main-title,
+.innovation-title,
+.empowered-title,
+.main-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  margin-bottom: 1rem;
 }
 
-/* === Responsive Styles === */
+.safya-small-title,
+.small-title {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Yellow quote box */
+.safya-quote-box {
+  background-color: #eeebc9;
+  padding: 2rem 1rem;
+  margin: 3rem auto 0 auto;
+  border-radius: 8px;
+  max-width: 1100px;
+  animation: fadeInUp 1s ease-out;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Responsive tweaks */
 @media (max-width: 768px) {
   .story-title {
     font-size: 2rem;
   }
 
+  /* Stack flex containers vertically */
   .safya-kitchen-container,
   .clean-world-content,
   .innovation-container,
@@ -280,29 +135,27 @@
     gap: 24px;
   }
 
-  .safya-kitchen-left,
-  .safya-kitchen-right,
+  .safya-kitchen-headings,
+  .safya-kitchen-content,
   .innovation-image,
   .innovation-text,
   .empowered-women-text,
-  .empowered-women-image {
+  .empowered-women-image,
+  .clean-world-left,
+  .clean-world-right {
     max-width: 100%;
+    min-width: 100%;
   }
 
   .safya-main-title,
   .innovation-title,
-  .empowered-title {
+  .empowered-title,
+  .main-title {
     font-size: 1.5rem;
   }
 
-  .clean-world-right p,
-  .innovation-text p,
-  .empowered-women-text p {
-    font-size: 15px;
-  }
-
-  .main-title {
-    font-size: 22px;
+  p {
+    font-size: 0.9rem;
   }
 
   .underline-img {
