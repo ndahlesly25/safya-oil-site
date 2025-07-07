@@ -15,9 +15,10 @@ const Blog = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <h1 className="blog-title">Blog</h1>
-        <p className="blog-subtitle">Explore insights, updates, and inspiration from Safya.</p>
+        
 
+
+        
         <div className="blog-grid">
           {blogs.map((blog) => (
             <div className="blog-card" key={blog.id}>
