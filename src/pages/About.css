@@ -250,25 +250,51 @@
 @media (max-width: 767px) {
   .about-container {
     flex-direction: column;
+    gap: 2rem;
+    align-items: center;
   }
 
   .about-image,
   .about-text {
-    flex: 1 1 100%;
-    min-width: 100%;
+    flex: unset;
+    width: 100%;
   }
 
   .image-caption-box {
-    position: static;
+    position: relative;
+    bottom: unset;
+    left: unset;
     margin-top: 0.5rem;
-    width: auto;
-    padding: 0.5rem 0;
-    background: none;
-    color: #000;
-    font-weight: normal;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    background-color: rgba(243, 222, 65, 0.85);
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .caption-number {
+    font-size: 1.3rem;
+  }
+
+  .caption-text {
+    font-size: 0.75rem;
   }
 
   .big-heading {
     font-size: 1.5rem;
+  }
+
+  .underline-img {
+    width: 80px;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .small-heading {
+    font-size: 0.9rem;
   }
 }

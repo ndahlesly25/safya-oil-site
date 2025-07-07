@@ -45,7 +45,7 @@ const About = () => {
     </section>
 
 
-        {/* Stats Section */}
+ {/* Stats Section */}
 <section className="about-stats">
   <div className="stats-wrapper">
     <h2 className="stats-heading">1 MILLION TONS PER YEAR</h2>
@@ -54,27 +54,36 @@ const About = () => {
     <div className="stats-container">
       <div className="stat-item">
         <FaIndustry className="stat-icon" />
-        <h3><CountUp end={450000} duration={3} separator="," /></h3>
+        <h3>
+          <CountUp start={0} end={450000} duration={3} separator="," redraw={true} />
+        </h3>
         <p>Tons of Crushing</p>
       </div>
       <div className="stat-item">
         <FaTint className="stat-icon" />
-        <h3><CountUp end={200000} duration={3} separator="," /></h3>
+        <h3>
+          <CountUp start={0} end={200000} duration={3} separator="," redraw={true} />
+        </h3>
         <p>Tons of Refined Oil</p>
       </div>
       <div className="stat-item">
         <FaFlask className="stat-icon" />
-        <h3><CountUp end={300000} duration={3} separator="," /></h3>
+        <h3>
+          <CountUp start={0} end={300000} duration={3} separator="," redraw={true} />
+        </h3>
         <p>Tons of Filling Oil</p>
       </div>
       <div className="stat-item">
         <FaTruckMoving className="stat-icon" />
-        <h3><CountUp end={50000} duration={3} separator="," /></h3>
+        <h3>
+          <CountUp start={0} end={50000} duration={3} separator="," redraw={true} />
+        </h3>
         <p>Tons of Biodiesel</p>
       </div>
     </div>
   </div>
 </section>
+
 
         {/* Intro Section */}
         
