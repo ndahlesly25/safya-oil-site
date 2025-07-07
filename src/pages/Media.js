@@ -17,11 +17,6 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import './Media.css';
 
 
-import pdfWorker from 'pdfjs-dist/build/pdf.worker.entry';
-
-pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker;
-
-
 
 // Set pdf worker
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
