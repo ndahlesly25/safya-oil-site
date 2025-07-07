@@ -68,50 +68,111 @@
   }
 }
 
-
-/* ---------- banner ---------- */
-.detail-banner{
-  height:35vh;
-  background-size:cover;background-position:center;
-  display:flex;align-items:center;justify-content:center
+/* ---------- banner ---------- */
+.detail-banner {
+  height: 35vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ---------- main content ---------- */
-.detail-content{
-  display:flex;flex-wrap:wrap;gap:2rem;
-  padding:4rem 2rem;align-items:flex-start;justify-content:center;
-}
-.detail-image-wrapper,.detail-main-img{max-width:360px;width:100%}
-.detail-text{flex:1 1 320px;max-width:540px}
-.medium-illustration{margin-top:1.5rem;border-radius:8px;width:100%;max-width:400px}
-
-/* ---------- thumb strip ---------- */
-.thumb-strip{
-  display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;
-  padding:2rem 0;
-}
-.thumb{
-  background:#fff;border:none;padding:0;cursor:pointer;text-align:center;
-  width:110px;transition:transform .25s;
-}
-.thumb img{width:100%;border-radius:6px;display:block}
-.thumb span{display:block;margin-top:.25rem;font-size:.8rem;font-weight:600;color:#333}
-.thumb.active img{outline:3px solid #f3c623}
-
-/* ---------- back ---------- */
-.back-wrapper{text-align:center;padding-bottom:3rem}
-.back-btn{
-  background:none;border:none;color:#f3c623;font-size:1rem;font-weight:700;
-  cursor:pointer;transition:color .25s;
-}
-.back-btn:hover{color:#e6b800}
-
-/* ---------- responsive ---------- */
-@media (max-width:768px){
-  .detail-content{flex-direction:column;align-items:center}
-  .detail-text{max-width:100%}
+/* ---------- main content ---------- */
+.detail-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
+.detail-image-wrapper,
+.detail-main-img {
+  max-width: 360px;
+  width: 100%;
+}
+
+.detail-text {
+  flex: 1 1 320px;
+  max-width: 540px;
+}
+
+.medium-illustration {
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ---------- thumb strip ---------- */
+.thumb-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.thumb {
+  background: #fff;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  width: 110px;
+  transition: transform 0.25s;
+}
+
+.thumb img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.thumb span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.thumb.active img {
+  outline: 3px solid #f3c623;
+}
+
+/* ---------- back ---------- */
+.back-wrapper {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #f3c623;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.back-btn:hover {
+  color: #e6b800;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 768px) {
+  .detail-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .detail-text {
+    max-width: 100%;
+  }
+}
 
 /* Banner with overlay title */
 .detail-banner {

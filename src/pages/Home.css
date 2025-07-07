@@ -25,7 +25,6 @@
 }
 
 .hero-overlay {
-  
   position: absolute;
   inset: 0;
   display: flex;
@@ -200,15 +199,16 @@ section {
     flex: 1 1 100%;
   }
 }
+
 /*
 .product-showcase {
   background-color: #fff;
   padding: 4rem 2rem;
   text-align: center;
 }
-  */
+*/
 
-  .product-showcase {
+.product-showcase {
   position: relative;
   background-image: url('../assets/product-background.jpg'); /* your image */
   background-size: cover;
@@ -224,20 +224,14 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  
   z-index: -1;
 }
-
-
 
 .product-showcase h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #222;
 }
-  
-
-
 
 .product-grid {
   display: grid;
@@ -427,7 +421,7 @@ section {
   position: relative;
 }
 
-text-with-float-image p {
+.text-with-float-image p {
   margin-bottom: 1rem;
   text-align: justify;
   color: #444;
@@ -491,7 +485,6 @@ text-with-float-image p {
   min-width: 300px;
   max-width: 600px;
 }
-
 
 .award-text h2 {
   font-size: 2rem;
@@ -656,4 +649,3 @@ text-with-float-image p {
     margin: 0.5rem auto;
   }
 }
-

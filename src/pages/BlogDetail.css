@@ -35,6 +35,21 @@
   object-fit: cover;
 }
 
+/* ✅ Responsive Fixes */
+@media (max-width: 480px) {
+  .blog-detail h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog-detail p {
+    font-size: 1rem;
+  }
+
+  .gallery img {
+    width: 100%; /* stack images on mobile */
+  }
+}
+
 .back-link {
   display: inline-block;
   margin-top: 2rem;

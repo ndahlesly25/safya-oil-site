@@ -1,7 +1,8 @@
 /* src/pages/Certificates.css */
 
+/* ========== HERO BANNER ========== */
 .certificates-banner {
-  background-image: url('https://thumbs.dreamstime.com/b/line-food-production-refined-sunflower-oil-line-food-production-refined-sunflower-oil-girl-worker-factory-115872595.jpg'); /* Use your actual image URL */
+  background-image: url('https://thumbs.dreamstime.com/b/line-food-production-refined-sunflower-oil-line-food-production-refined-sunflower-oil-girl-worker-factory-115872595.jpg');
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -10,6 +11,7 @@
   justify-content: center;
   position: relative;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .certificates-title {
@@ -18,8 +20,16 @@
   color: #000000;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   z-index: 1;
+  word-break: break-word;
 }
 
+@media (max-width: 768px) {
+  .certificates-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ========== PAGE CONTAINER ========== */
 .certificates-page {
   max-width: 900px;
   margin: 2rem auto;
@@ -29,9 +39,7 @@
   color: #333;
 }
 
-
-/* FACTORY INFO SECTION */
-
+/* ========== FACTORY INFO SECTION ========== */
 .factory-info-section {
   background-color: #fff;
   padding: 4rem 1rem;
@@ -84,7 +92,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .factory-info-container {
     flex-direction: column;
@@ -92,7 +99,7 @@
   }
 
   .factory-main-title {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 
   .factory-info-left,
@@ -105,6 +112,7 @@
   }
 }
 
+/* ========== CERTIFICATES LIST SECTION ========== */
 .certificates-list-section {
   background-color: #fff;
   padding: 4rem 1rem;
@@ -120,7 +128,6 @@
   align-items: flex-start;
 }
 
-/* Left - List Styling */
 .certificates-list-left {
   flex: 1;
   min-width: 300px;
@@ -129,6 +136,7 @@
 .certificate-items {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .certificate-items li {
@@ -138,6 +146,7 @@
   font-weight: bold;
   font-size: 1rem;
   color: #333;
+  line-height: 1.5;
 }
 
 .certificate-items li::before {
@@ -156,7 +165,6 @@
   justify-content: center;
 }
 
-/* Optional smaller sub-text under certain lines */
 .certificate-items .sub {
   font-weight: normal;
   font-size: 0.9rem;
@@ -165,7 +173,7 @@
   margin-top: 0.2rem;
 }
 
-/* Right - Image Styling */
+/* Right Side Image */
 .certificates-list-right {
   flex: 1;
   min-width: 300px;
@@ -179,20 +187,19 @@
   object-fit: cover;
 }
 
-/* Responsive Design */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   .certificates-list-container {
     flex-direction: column;
     text-align: center;
   }
 
+  .certificates-list-right {
+    margin-top: 2rem;
+  }
+
   .certificate-items li {
     text-align: left;
     padding-left: 2.5rem;
   }
-
-  .certificates-list-right {
-    margin-top: 2rem;
-  }
 }
-

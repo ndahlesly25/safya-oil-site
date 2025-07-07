@@ -1,7 +1,21 @@
+/* ============================
+   Global Styles for App.css
+   ============================ */
+
+/* Prevent horizontal scroll on small screens */
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* === App Container === */
 .App {
   text-align: center;
 }
 
+/* === Logo Animation === */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,6 +27,16 @@
   }
 }
 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* === Header Styling === */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,17 +48,13 @@
   color: white;
 }
 
+/* === Link Styling === */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-link:hover {
+  color: #4fa3d1;
 }
-
-
